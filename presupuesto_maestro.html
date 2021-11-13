@@ -1,0 +1,2623 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Presupuesto Maestro</title>
+
+	<link rel="stylesheet" href="presupuesto_maestro.css">
+</head>
+<script src="presupuesto_maestro.js"></script>
+<body>
+	<form action="">
+		<div id="main-container">
+			<table id="tabla_presupuesto_ventas">
+				<thead>
+					<tr>
+						<td colspan="5">
+							<center>
+							<h1>
+							Información de inventarios
+							</h1>
+							</center>
+
+						</td>
+					</tr>
+				</thead>
+
+				<tr>
+                    <td><h1>Concepto</h1></td><td><h1>Semestre 1</h1></td><td><h1>Semestre 2</h1></td><td><h1>Costos 1° Semestre</h1>
+                    </td><td><h1>Costos 2° Semestre</h1></td> 
+                </tr>
+                <tr>
+                    <td>Materia Prima A</td>
+                    <td><input type="number" placeholder="Inventario Inicial" required id="InventarioInicial_MaterialA"></td>
+                    <td><input type="number" placeholder="Inventario Final" required id="InventarioFinal_MaterialA"></td>
+                    <td><input type="number" placeholder="Semestre 1" required id="CostoPrimer_MaterialA"></td>
+                    <td><input type="number" placeholder="Semestre 2" required id="CostoSegundo_MaterialA"></td>
+                </tr>
+
+                <tr>
+                    <td>Materia Prima B</td>
+                    <td><input type="number" placeholder="Inventario Inicial" required id="InventarioInicial_MaterialB"></td>
+                    <td><input type="number" placeholder="Inventario Final" required id="InventarioFinal_MaterialB"></td>
+                    <td><input type="number" placeholder="Semestre 1" required id="CostoPrimer_MaterialB"></td>
+                    <td><input type="number" placeholder="Semestre 2" required id="CostoSegundo_MaterialB"></td>
+                </tr>
+
+                <tr>
+                    <td>Materia Prima C</td>
+                    <td><input type="number" placeholder="Inventario Inicial" required id="InventarioInicial_MaterialC"></td>
+                    <td><input type="number" placeholder="Inventario Final" required id="InventarioFinal_MaterialC"></td>
+                    <td><input type="number" placeholder="Semestre 1" required id="CostoPrimer_MaterialC"></td>
+                    <td><input type="number" placeholder="Semestre 2" required id="CostoSegundo_MaterialC"></td>
+                </tr>
+
+                <tr>
+                    <td>Producto A</td>
+                    <td><input type="number" placeholder="Inventario Inicial" required id="InventarioInicialPrimer_ProductoA"></td>
+                    <td><input type="number" placeholder="Inventario Final" required id="InventarioInicialSegundo_ProductoA"> <td colspan="2"></td>
+                </tr>
+                <tr>
+                    <td>Producto B</td>
+                    <td><input type="number" placeholder="Inventario Inicial" required id="InventarioInicialPrimer_ProductoB"></td>
+                    <td><input type="number" placeholder="Inventario Final" required id="InventarioInicialSegundo_ProductoB"> <td colspan="2"></td>
+                </tr>
+                <tr>
+                    <td>Producto C</td>
+                    <td><input type="number" placeholder="Inventario Inicial" required id="InventarioInicialPrimer_ProductoC"></td>
+                    <td><input type="number" placeholder="Inventario Final" required id="InventarioInicialSegundo_ProductoC"> <td colspan="2"></td>
+                </tr>
+			</table>
+
+            <br><br><br>
+
+            <table>
+                <thead>
+					<tr>
+						<td colspan="4">
+							<center>
+							<h1>
+							Productos   
+							</h1>
+							</center>
+						</td>
+					</tr>
+				</thead>
+
+                <tr>
+                    <td><h1>Concepto</h1></td><td><h1>Producto A</h1></td><td><h1>Producto B</h1></td><td><h1>Producto C</h1></td>
+                </tr>
+
+                <tr>
+                    <td>Precio de venta primer semestre</td>
+                    <td><input type="number" placeholder="Semestre 1" required id="Precio_venta_PrimerSemestre_ProductoA"></td>
+                    <td><input type="number" placeholder="Semestre 1" required id="Precio_venta_PrimerSemestre_ProductoB"></td>
+                    <td><input type="number" placeholder="Semestre 1" required id="Precio_venta_PrimerSemestre_ProductoC"></td>
+                </tr>
+
+                <tr>
+                    <td>Precio de venta segundo semestre</td>
+                    <td><input type="number" placeholder="Semestre 2" required id="Precio_venta_SegundoSemestre_ProductoA"></td>
+                    <td><input type="number" placeholder="Semestre 2" required id="Precio_venta_SegundoSemestre_ProductoB"></td>
+                    <td><input type="number" placeholder="Semestre 2" required id="Precio_venta_SegundoSemestre_ProductoC"></td>
+                </tr>
+
+                <tr>
+                    <td>Ventas planeadas primer semestre</td>
+                    <td><input type="number" placeholder="Semestre 1" required id="Ventas_planeadas_ProductoA_PrimerSemestre"></td>
+                    <td><input type="number" placeholder="Semestre 1" required id="Ventas_planeadas_ProductoB_PrimerSemestre"></td>
+                    <td><input type="number" placeholder="Semestre 1" required id="Ventas_planeadas_ProductoC_PrimerSemestre"></td>
+                </tr>
+
+                <tr>
+                    <td>Ventas planeadas segundo semestre</td>
+                    <td><input type="number" placeholder="Semestre 2" required id="Ventas_planeadas_ProductoA_SegundoSemestre"></td>
+                    <td><input type="number" placeholder="Semestre 2" required id="Ventas_planeadas_ProductoB_SegundoSemestre"></td>
+                    <td><input type="number" placeholder="Semestre 2" required id="Ventas_planeadas_ProductoC_SegundoSemestre"></td>
+                </tr>
+
+            </table>
+
+            <br><br><br>
+
+            <table>
+                <thead>
+					<tr>
+						<td colspan="3">
+							<center>
+							<h1>
+							Gastos de administracion y ventas 
+							</h1>
+							</center>
+						</td>
+					</tr>
+                </thead>
+
+                <tr>
+                    <td><h1>Concepto</h1></td><td><h1>Cantidad</h1></td><td><h1>Metrica</h1></td>
+                </tr>
+
+                <tr>
+                    <td>Depreciacion</td>
+                    <td><input type="number" placeholder="Cantidad" required id="DepreciacionAdministracionVentas"></td>
+                    <td><h2>Anuales</h2></td>
+                </tr>
+
+                <tr>
+                    <td>Sueldos y salarios</td>
+                    <td><input type="number" placeholder="Cantidad" required id="SueldosAdministracionVentas"></td>
+                    <td><h2>Anuales</h2></td>
+                </tr>
+
+                <tr>
+                    <td>Comisiones</td>
+                    <td><input type="number" placeholder="Porcentaje" required id="ComisionesAdministracionVentas"></td>
+                    <td><h2>Ventas proyectadas</h2></td>
+                </tr>
+
+                <tr>
+                    <td>Varios</td>
+                    <td><input type="number" placeholder="Cantidad" required id="VariosAdministracionVentas_PrimerSemestre"></td>
+                    <td><h2>Primer Semestre</h2></td>
+                </tr>
+
+                <tr>
+                    <td>Varios</td>
+                    <td><input type="number" placeholder="Cantidad" required id="VariosAdministracionVentas_SegundoSemestre"></td>
+                    <td><h2>Segundo Semestre</h2></td>
+                </tr>
+
+                <tr>
+                    <td>Interes por prestamo</td>
+                    <td><input type="number" placeholder="Cantidad" required id="InteresAdministracionVentas"></td>
+                    <td><h2>Anuales</h2></td>
+                </tr>
+
+            </table>
+
+            <br><br><br>
+
+            <table>
+                <thead>
+					<tr>
+						<td colspan="3">
+							<center>
+							<h1>
+							Gastos de fabricación indirectos
+							</h1>
+							</center>
+						</td>
+					</tr>
+                </thead>
+
+                <tr>
+                    <td><h1>Concepto</h1></td><td><h1>Cantidad</h1></td><td><h1>Metrica</h1></td>
+                </tr>
+
+                <tr>
+                    <td>Depreciacion</td>
+                    <td><input type="number" placeholder="Cantidad" required id="DepreciacionFabricacionIndirectos"></td>
+                    <td><h2>Anuales</h2></td>
+                </tr>
+
+                <tr>
+                    <td>Seguros</td>
+                    <td><input type="number" placeholder="Cantidad" required id="SegurosFabricacionIndirectos"></td>
+                    <td><h2>Anuales</h2></td>
+                </tr>
+
+                <tr>
+                    <td>Mantenimiento</td>
+                    <td><input type="number" placeholder="Cantidad" required id="MantenimientoFabricacionIndirectos_PrimerSemestre"></td>
+                    <td><h2>Primer Semestre</h2></td>
+                </tr>
+
+                <tr>
+                    <td>Mantenimiento</td>
+                    <td><input type="number" placeholder="Cantidad" required id="MantenimientoFabricacionIndirectos_SegundoSemestre"></td>
+                    <td><h2>Segundo Semestre</h2></td>
+                </tr>
+
+                <tr>
+                    <td>Energeticos</td>
+                    <td><input type="number" placeholder="Cantidad" required id="EnergeticosFabricacionIndirectos_PrimerSemestre"></td>
+                    <td><h2>Primer Semestre</h2></td>
+                </tr>
+
+                <tr>
+                    <td>Energeticos</td>
+                    <td><input type="number" placeholder="Cantidad" required id="EnergeticosFabricacionIndirectos_SegundoSemestre"></td>
+                    <td><h2>Segundo Semestre</h2></td>
+                </tr>
+
+                <tr>
+                    <td>Varios</td>
+                    <td><input type="number" placeholder="Cantidad" required id="VariosFabricacionIndirectos"></td>
+                    <td><h2>Anuales</h2></td>
+                </tr>
+
+            </table>
+
+            <br><br><br>
+
+            <table>
+                <thead>
+					<tr>
+						<td colspan="3">
+							<center>
+							<h1>
+							Datos variables
+							</h1>
+							</center>
+						</td>
+					</tr>
+                </thead>
+
+                <tr>
+                    <td><h1>Concepto</h1></td><td><h1>Cantidad</h1></td>
+                </tr>
+
+                <tr>
+                    <td>Equipo nuevo</td>
+                    <td><input type="number" placeholder="Ingresa Dato" required id="Maquinaria"></td>
+                </tr>
+
+                <tr>
+                    <td>Porcentaje a cobrar saldo clientes año anterior</td>
+                    <td><input type="number" placeholder="Ingresa dato" required id="Porcentaje_Clientes_Pasado">&nbsp%</td>
+                </tr>
+
+                <tr>
+                    <td>Porcentaje a cobrar ventas presupuestadas año actual</td>
+                    <td><input type="number" placeholder="Ingresa dato" required id="Porcentaje_Ventas_Actual">&nbsp%</td>
+                </tr>
+
+                <tr>
+                    <td>Porcentaje a pagar saldo proveedores año anterior</td>
+                    <td><input type="number" placeholder="Ingresa dato" required id="Porcentaje_Proveedores_Pasado">&nbsp%</td>
+                </tr>
+
+                <tr>
+                    <td>Porcentaje a pagar compras presupuestadas año actual</td>
+                    <td><input type="number" placeholder="Ingresa dato" required id="Porcentaje_Compras_Actual">&nbsp%</td>
+                </tr>
+
+            </table>
+
+            <br><br><br>
+
+            <table id="tabla_balance_general">
+                <thead>
+					<tr>
+						<td colspan="4">
+							<center>
+							<h1>
+							Balance General al 31 de Diciembre del <input type="number">
+							</h1>
+							</center>
+						</td>
+					</tr>
+                </thead>
+
+                <tr>
+                    <td colspan="2"><h2>Activos</h2></td>
+                    <td colspan="2"><h2>Pasivos</h2></td>
+                </tr>
+
+                <tr>
+                    <td>Efectivo</td>
+                    <td><input type="number" placeholder="Ingresar cantidad" required id="Efectivo"></td>
+                    <td>Provedores</td>
+                    <td><input type="number" placeholder="Ingresar cantidad" required id="Pasivos_Proveedores"></td>
+                </tr>
+
+                <tr>
+                    <td>Clientes</td>
+                    <td><input type="number" placeholder="Ingresar cantidad" required id="Activos_Clientes"></td>
+                    <td>Documentos por pagar</td>
+                    <td><input type="number" placeholder="Ingresar cantidad" required id="DocumentosPorPagar"></td>
+                </tr>
+
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td>ISR por pagar</td>
+                    <td><input type="number" placeholder="Ingresar cantidad" required id="ISR"></td>
+                </tr>
+
+                <tr>
+                    <td></td><td></td>
+                    <td><h3><b>Total de pasivo a largo plazo</b></h3></td> <td></td>
+                </tr>
+
+                <tr>
+                    <td>Inventario de materiales</td>
+                    <td><input type="number" placeholder="Ingresar cantidad" required id="InventarioMaterialesBalanceGeneral"></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+
+                <tr>
+                    <td>Inventario de producto terminado</td>
+                    <td><input type="number" placeholder="Ingresar cantidad" required id="InventarioInicialProductosTerminados_BalangeGeneral"></td>
+                    <td>Prestamos bancarios</td>
+                    <td><input type="number" placeholder="Ingresar cantidad" required id="PrestamosBancarios"></td>
+                </tr>
+
+                <tr>
+                    <td><h3>Total de activo circulante</h3></td><td></td>
+                    <td><h3>Total de pasivo a largo plazo</h3></td><td></td>
+                </tr>
+
+                <tr>
+                    <td></td><td></td><td></td><td></td>
+                </tr>
+
+                <tr>
+                    <td>Terrenos</td>
+                    <td><input type="number" placeholder="Ingresa cantidad" required id="Terrenos"></td>
+                    <td><h3>PASIVO TOTAL</h3></td>
+                    <td></td>
+                </tr>
+
+                <tr>
+                    <td>Planta y equipo</td>
+                    <td><input type="number" placeholder="Ingresa cantidad" required id="PlantaEquipo"></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+
+                <tr>
+                    <td></td><td></td>
+                    <td><h3>CAPITAL CONTABLE</h3></td><td></td>
+                </tr>
+
+                <tr>
+                    <td><h3>Total activo No circulante</h3></td><td></td>
+                    <td>Capital contribuido</td><td><input type="number" placeholder="Ingresa cantidad" required id="CapitalContribuido"></td>
+                </tr>
+
+                <tr>
+                    <td></td><td></td>
+                    <td>Capital ganado</td><td><input type="number" placeholder="Ingresa cantidad" required id="CapitalGanado"></td>
+                </tr>
+
+                <tr>
+                    <td></td><td></td>
+                    <td><h3>CAPITAL CONTABLE TOTAL</h3></td><td></td>
+                </tr>
+
+                <tr>
+                    <td></td><td></td><td></td><td></td>
+                </tr>
+
+                <tr>
+                    <td><h3>ACTIVO TOTAL</h3></td><td></td>
+                    <td><h3>SUMA DEL PASIVO Y CAPITAL</h3></td><td></td>
+                </tr>
+
+            </table>
+
+            <br><br><br>
+            
+            <table>
+                <thead>
+					<tr>
+						<td colspan="4">
+							<center>
+							<h1>
+							Requerimiento de materiales
+							</h1>
+							</center>
+						</td>
+					</tr>
+                </thead>
+
+                <tr>
+                    <td></td><td><h2>PRODUCTO A</h2></td><td><h2>PRODUCTO B</h2></td>
+                    <td><h2>PRODUCTO C</h2></td>
+                </tr>
+
+                <tr>
+                    <td>Materia prima A</td>
+                    <td><input type="number" placeholder="Ingresa cantidad" required id="Materia_primaA_productoA"></td>
+                    <td><input type="number" placeholder="Ingresa cantidad" required id="Materia_primaA_productoB"></td>
+                    <td><input type="number" placeholder="Ingresa cantidad" required id="Materia_primaA_productoC"></td>
+                </tr>
+
+                <tr>
+                    <td>Materia prima B</td>
+                    <td><input type="number" placeholder="Ingresa cantidad" required id="Materia_primaB_productoA"></td>
+                    <td><input type="number" placeholder="Ingresa cantidad" required id="Materia_primaB_productoB"></td>
+                    <td><input type="number" placeholder="Ingresa cantidad" required id="Materia_primaB_productoC"></td>
+                </tr>
+
+                <tr>
+                    <td>Materia prima C</td>
+                    <td><input type="number" placeholder="Ingresa cantidad" required id="Materia_primaC_productoA"></td>
+                    <td><input type="number" placeholder="Ingresa cantidad" required id="Materia_primaC_productoB"></td>
+                    <td><input type="number" placeholder="Ingresa cantidad" required id="Materia_primaC_productoC"></td>
+                </tr>
+
+                <tr>
+                    <td>Horas mano de obra</td>
+                    <td><input type="number" placeholder="Ingresa cantidad" required id="ManoDeObraHora_ProductoA"></td>
+                    <td><input type="number" placeholder="Ingresa cantidad" required id="ManoDeObraHora_ProductoB"></td>
+                    <td><input type="number" placeholder="Ingresa cantidad" required id="ManoDeObraHora_ProductoC"></td>
+                </tr>
+            </table>
+
+            <br><br><br>
+
+            <table>
+                <thead>
+					<tr>
+						<td colspan="3">
+							<center>
+							<h1>
+							Mano de obra directa
+							</h1>
+							</center>
+						</td>
+					</tr>
+                </thead>
+
+                <tr>
+                    <td><h2>Concepto</h2></td><td><h2>Cantidad</h2></td><td><h2>Metrica</h2></td>
+                </tr>
+
+                <tr>
+                    <td>Por Hora</td>
+                    <td><input type="number" placeholder="Ingresa cantidad" required id="CuotaManoDeObra_PrimerSemestre"></td>
+                    <td>Primer semestre</td>
+                </tr>
+
+                <tr>
+                    <td>Por Hora</td>
+                    <td><input type="number" placeholder="Ingresa cantidad" required id="CuotaManoDeObra_SegundoSemestre"></td>
+                    <td>Segundo semestre</td>
+                </tr>
+            </table>
+
+
+
+
+
+			<br><br>
+
+			<center>
+				<input type="submit" onclick="prueba()" value="Realizar presupuesto">
+			</center>
+
+            <br><br><br><br>
+
+            <table>
+                <thead>
+                    <tr>
+                        <td colspan="4">
+                            <center>
+                            <h1>
+                                I. Presupuesto de Operación.
+                            </h1>
+                            </center>
+                        </td>
+                    </tr>
+                </thead>
+            </table>
+
+            <br><br><br>
+
+            <table>
+
+                <thead>
+                    <tr>
+                        <td colspan="4">
+                            <center>
+                            <h1>
+                            1. Presupuesto de ventas
+                            </h1>
+                            </center>
+                        </td>
+                    </tr>
+                </thead>
+
+                <tr>
+                    <td></td><td><h2>1er Semestre</h2></td><td><h2>2do Semestre</h2></td><td><h2>Total Anual</h2></td>
+                </tr>
+
+                <tr>
+                    <td><h2>Producto A</h2></td><td></td><td></td><td></td>
+                </tr>
+
+                <tr>
+                    <td>Unidades a vender</td>
+                    <td id="Unidades_vender_ProductoA_primer_semestre"></td>
+                    <td id="Unidades_vender_ProductoA_segundo_semestre"></td>
+                    <td></td>
+                </tr>
+
+                <tr>
+                    <td>Precio de venta</td>
+                    <td id="Precio_venta_ProductoA_PrimerSemestre"></td>
+                    <td id="Precio_venta_ProductoA_SegundoSemestre"></td>
+                    <td></td>
+                </tr>
+
+                <tr>
+                    <td><h3>Importe de venta</h3></td>
+                    <td id="Importe_venta_ProductoA_PrimerSemestre"></td>
+                    <td id="Importe_venta_ProductoA_SegundoSemestre"></td>
+                    <td id="VentasAnuales_ProductoA"></td>
+                </tr>
+                
+                <tr>
+                    <td></td><td></td><td></td><td></td>
+                </tr>
+
+                <tr>
+                    <td><h2>Producto B</h2></td><td></td><td></td><td></td>
+                </tr>
+
+                <tr>
+                    <td>Unidades a vender</td>
+                    <td id="Unidades_vender_ProductoB_primer_semestre"></td>
+                    <td id="Unidades_vender_ProductoB_segundo_semestre"></td>
+                    <td></td>
+                </tr>
+
+                <tr>
+                    <td>Precio de venta</td>
+                    <td id="Precio_venta_ProductoB_PrimerSemestre"></td>
+                    <td id="Precio_venta_ProductoB_SegundoSemestre"></td>
+                    <td></td>
+                </tr>
+
+                <tr>
+                    <td><h3>Importe de venta</h3></td>
+                    <td id="Importe_venta_ProductoB_PrimerSemestre"></td>
+                    <td id="Importe_venta_ProductoB_SegundoSemestre"></td>
+                    <td id="VentasAnuales_ProductoB"></td>
+                </tr>
+                
+                <tr>
+                    <td></td><td></td><td></td><td></td>
+                </tr>
+
+                <tr>
+                    <td><h2>Producto C</h2></td><td></td><td></td><td></td>
+                </tr>
+
+                <tr>
+                    <td>Unidades a vender</td>
+                    <td id="Unidades_vender_ProductoC_primer_semestre"></td>
+                    <td id="Unidades_vender_ProductoC_segundo_semestre"></td>
+                    <td></td>
+                </tr>
+
+                <tr>
+                    <td>Precio de venta</td>
+                    <td id="Precio_venta_ProductoC_PrimerSemestre"></td>
+                    <td id="Precio_venta_ProductoC_SegundoSemestre"></td>
+                    <td></td>
+                </tr>
+
+                <tr>
+                    <td><h3>Importe de venta</h3></td>
+                    <td id="Importe_venta_ProductoC_PrimerSemestre"></td>
+                    <td id="Importe_venta_ProductoC_SegundoSemestre"></td>
+                    <td id="VentasAnuales_ProductoC"></td>
+                </tr>
+                
+                <tr>
+                    <td></td><td></td><td></td><td></td>
+                </tr>
+
+                <tr>
+                    <td><h3>Total de ventas por semestre</h3></td>
+                    <td id="Total_ventas_PrimerSemestre"></td>
+                    <td id="Total_ventas_SegundoSemestre"></td>
+                    <td id="TotalVentasAnuales"></td>
+                </tr>
+
+                <tr>
+                    <td></td><td></td><td></td><td></td>
+                </tr>
+
+            </table>
+
+            <br><br><br>
+
+            <table>
+                <thead>
+                    <tr>
+                        <td colspan="3">
+                            <center>
+                            <h1>
+                                2. Determinación del saldo de Clientes y Flujo de Entradas
+                            </h1>
+                            </center>
+                        </td>
+                    </tr>
+                </thead>
+
+                <tr>
+                    <td><h3>Descripción</h3></td>
+                    <td><h3>Importe</h3></td>
+                    <td><h3>Total</h3></td>
+                </tr>
+
+                <tr>
+                    <td>Saldo clientes 31-Dic-2020</td>
+                    <td></td>
+                    <td id="Saldo_Cliente_Pasado"></td>
+                </tr>
+
+                <tr>
+                    <td>Ventas 2021</td>
+                    <td></td>
+                    <td id="TotalVentasAnuales_BalanceGeneral"></td>
+                </tr>
+
+                <tr>
+                    <td>Total de clientes 2021</td>
+                    <td></td>
+                    <td id="Total_Clientes_Actual"></td>
+                </tr>
+
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+
+                <tr>
+                    <td><h3>Entradas de efectivo</h3></td><td></td><td></td>
+                </tr>
+
+                <tr>
+                    <td>Por cobranza del 2020</td>
+                    <td id="PorCobrar_Pasado"></td>
+                    <td></td>
+                </tr>
+
+                <tr>
+                    <td>Por cobranza del 2021</td>
+                    <td id="PorCobrar_Actual"></td>
+                    <td></td>
+                </tr>
+
+                <tr>
+                    <td>Total de entradas 2021</td>
+                    <td></td>
+                    <td id="Total_Entradas_Actual"></td>
+                </tr>
+
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+
+                <tr>
+                    <td><h3>Saldo de clientes del 2021</h3></td>
+                    <td></td>
+                    <td id="Saldo_Clientes_Actual"></td>
+                </tr>
+
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </table>
+
+
+            <br><br><br>
+
+            <table>
+                <thead>
+                    <tr>
+                        <td colspan="4">
+                            <center>
+                            <h1>
+                                3. Presupuesto de Producción
+                            </h1>
+                            </center>
+                        </td>
+                    </tr>
+                </thead>
+
+                <tr>
+                    <td></td><td><h2>1er Semestre</h2></td><td><h2>2do Semestre</h2></td><td><h2>Total Anual</h2></td>
+                </tr>
+
+                <tr>
+                    <td><h3>Producto A</h3></td><td></td><td></td><td></td>
+                </tr>
+
+                <tr>
+                    <td>Unidades a vender</td>
+                    <td id="Unidades_a_vender_productoA_PrimerSemestre_PresupuestoProduccion"></td>
+                    <td id="Unidades_a_vender_productoA_SegundoSemestre_PresupuestoProduccion"></td>
+                    <td id="Unidades_a_vender_productoA_Anual_PresupuestoProduccion"></td>
+                </tr>
+
+                <tr>
+                    <td>(+) Inventario Final</td>
+                    <td id="Inventario_final_productoA_PrimerSemestre"></td>
+                    <td id="Inventario_final_productoA_SegundoSemestre"></td>
+                    <td id="Inventario_final_productoA_Anual"></td>
+                </tr>
+
+                <tr>
+                    <td>(=) Total de Unidades</td>
+                    <td id="Total_unidades_productoA_PrimerSemestre"></td>
+                    <td id="Total_unidades_productoA_SegundoSemestre"></td>
+                    <td id="Total_Unidades_productoA_Anuales"></td>
+                </tr>
+
+                <tr>
+                    <td>(-) Inventario Inicial</td>
+                    <td id="Inventario_inicial_productoA_PrimerSemestre_PresupuestoProduccion"></td>
+                    <td id="Inventario_inicial_productoA_SegundoSemestre_PresupuestoProduccion"></td>
+                    <td id="Inventario_inicial_productoA_Anual_PresupuesProduccion"></td>
+                </tr>
+
+                <tr>
+                    <td><h3>(=) Unidades a Producir</h3></td>
+                    <td id="Unidades_a_producir_productoA_PrimerSemestre"></td>
+                    <td id="Unidades_a_producir_productoA_SegundoSemestre"></td>
+                    <td id="Total_Unidades_Producir_productoA_Anual"></td>
+                </tr>
+
+                <tr>
+                    <td></td><td></td><td></td><td></td>
+                </tr>
+
+                <tr>
+                    <td><h3>Producto B</h3></td><td></td><td></td><td></td>
+                </tr>
+
+                <tr>
+                    <td>Unidades a vender</td>
+                    <td id="Unidades_a_vender_productoB_PrimerSemestre_PresupuestoProduccion"></td>
+                    <td id="Unidades_a_vender_productoB_SegundoSemestre_PresupuestoProduccion"></td>
+                    <td id="Unidades_a_vender_productoB_Anual_PresupuestoProduccion"></td>
+                </tr>
+
+                <tr>
+                    <td>(+) Inventario Final</td>
+                    <td id="Inventario_final_productoB_PrimerSemestre"></td>
+                    <td id="Inventario_final_productoB_SegundoSemestre"></td>
+                    <td id="Inventario_final_productoB_Anual"></td>
+                </tr>
+
+                <tr>
+                    <td>(=) Total de Unidades</td>
+                    <td id="Total_unidades_productoB_PrimerSemestre"></td>
+                    <td id="Total_unidades_productoB_SegundoSemestre"></td>
+                    <td id="Total_Unidades_productoB_Anuales"></td>
+                </tr>
+
+                <tr>
+                    <td>(-) Inventario Inicial</td>
+                    <td id="Inventario_inicial_productoB_PrimerSemestre_PresupuestoProduccion"></td>
+                    <td id="Inventario_inicial_productoB_SegundoSemestre_PresupuestoProduccion"></td>
+                    <td id="Inventario_inicial_productoB_Anual_PresupuesProduccion"></td>
+                </tr>
+
+                <tr>
+                    <td><h3>(=) Unidades a Producir</h3></td>
+                    <td id="Unidades_a_producir_productoB_PrimerSemestre"></td>
+                    <td id="Unidades_a_producir_productoB_SegundoSemestre"></td>
+                    <td id="Total_Unidades_Producir_productoB_Anual"></td>
+                </tr>
+
+                <tr>
+                    <td></td><td></td><td></td><td></td>
+                </tr>
+
+                <tr>
+                    <td><h3>Producto C</h3></td><td></td><td></td><td></td>
+                </tr>
+
+                <tr>
+                    <td>Unidades a vender</td>
+                    <td id="Unidades_a_vender_productoC_PrimerSemestre_PresupuestoProduccion"></td>
+                    <td id="Unidades_a_vender_productoC_SegundoSemestre_PresupuestoProduccion"></td>
+                    <td id="Unidades_a_vender_productoC_Anual_PresupuestoProduccion"></td>
+                </tr>
+
+                <tr>
+                    <td>(+) Inventario Final</td>
+                    <td id="Inventario_final_productoC_PrimerSemestre"></td>
+                    <td id="Inventario_final_productoC_SegundoSemestre"></td>
+                    <td id="Inventario_final_productoC_Anual"></td>
+                </tr>
+
+                <tr>
+                    <td>(=) Total de Unidades</td>
+                    <td id="Total_unidades_productoC_PrimerSemestre"></td>
+                    <td id="Total_unidades_productoC_SegundoSemestre"></td>
+                    <td id="Total_Unidades_productoC_Anuales"></td>
+                </tr>
+
+                <tr>
+                    <td>(-) Inventario Inicial</td>
+                    <td id="Inventario_inicial_productoC_PrimerSemestre_PresupuestoProduccion"></td>
+                    <td id="Inventario_inicial_productoC_SegundoSemestre_PresupuestoProduccion"></td>
+                    <td id="Inventario_inicial_productoC_Anual_PresupuesProduccion"></td>
+                </tr>
+
+                <tr>
+                    <td><h3>(=) Unidades a Producir</h3></td>
+                    <td id="Unidades_a_producir_productoC_PrimerSemestre"></td>
+                    <td id="Unidades_a_producir_productoC_SegundoSemestre"></td>
+                    <td id="Total_Unidades_Producir_productoC_Anual"></td>
+                </tr>
+
+                <tr>
+                    <td></td><td></td><td></td><td></td>
+                </tr>
+
+            </table>
+
+            <br><br><br>
+
+            <table>
+                <thead>
+                    <tr>
+                        <td colspan="4">
+                            <center>
+                            <h1>
+                                4. Presupuesto de Requerimiento de Materiales
+                            </h1>
+                            </center>
+                        </td>
+                    </tr>
+                </thead>
+
+                <tr>
+                    <td></td><td><h2>1er Semestre</h2></td><td><h2>2do Semestre</h2></td><td><h2>Total Anual</h2></td>
+                </tr>
+
+                <tr>
+                    <td><h3>Producto A</h3></td><td></td><td></td><td></td>
+                </tr>
+
+                <tr>
+                    <td>Unidades a producir</td>
+                    <td id="Unidades_a_producir_productoA_PrimerSemestre_RequerimientoMateriales"></td>
+                    <td id="Unidades_a_producir_productoA_SegundoSemestre_RequerimientoMateriales"></td>
+                    <td id="Total_Unidades_Producir_productoA_Anual_RequerimientoMateriales"></td>
+                </tr>
+
+                <tr>
+                    <td></td><td></td><td></td><td></td>
+                </tr>
+
+                <tr>
+                    <td><h4>Material A</h4></td><td></td><td></td><td></td>
+                </tr>
+
+                <tr>
+                    <td>Requerimiento de material</td>
+                    <td id="MaterialA_productoA_PrimerSemestre"></td>
+                    <td id="MaterialA_productoA_SegundoSemestre"></td>
+                    <td id="MaterialA_productoA_Anual"></td>
+                </tr>
+
+                <tr>
+                    <td><b>Total de Material A requerido</b></td>
+                    <td id="Total_materialA_productoA_PrimerSemestre"></td>
+                    <td id="Total_materialA_productoA_SegundoSemestre"></td>
+                    <td id="TotalA_material_productoA_Anual"></td>
+                </tr>
+
+                <tr>
+                    <td><h4>Material B</h4></td><td></td><td></td><td></td>
+                </tr>
+
+                <tr>
+                    <td>Requerimiento de material</td>
+                    <td id="MaterialB_productoA_PrimerSemestre"></td>
+                    <td id="MaterialB_productoA_SegundoSemestre"></td>
+                    <td id="MaterialB_productoA_Anual"></td>
+                </tr>
+
+                <tr>
+                    <td><b>Total de Material B requerido</b></td>
+                    <td id="Total_materialB_productoA_PrimerSemestre"></td>
+                    <td id="Total_materialB_productoA_SegundoSemestre"></td>
+                    <td id="TotalA_materialB_productoA_Anual"></td>
+                </tr>
+
+                <tr>
+                    <td><h4>Material C</h4></td><td></td><td></td><td></td>
+                </tr>
+
+                <tr>
+                    <td>Requerimiento de material</td>
+                    <td id="MaterialC_productoA_PrimerSemestre"></td>
+                    <td id="MaterialC_productoA_SegundoSemestre"></td>
+                    <td id="MaterialC_productoA_Anual"></td>
+                </tr>
+
+                <tr>
+                    <td><b>Total de Material C requerido</b></td>
+                    <td id="Total_materialC_productoA_PrimerSemestre"></td>
+                    <td id="Total_materialC_productoA_SegundoSemestre"></td>
+                    <td id="TotalA_materialC_productoA_Anual"></td>
+                </tr>
+
+                <tr>
+                    <td></td><td></td><td></td><td></td>
+                </tr>
+
+                <tr>
+                    <td><h3>Producto B</h3></td><td></td><td></td><td></td>
+                </tr>
+
+                <tr>
+                    <td>Unidades a producir</td>
+                    <td id="Unidades_a_producir_productoB_PrimerSemestre_RequerimientoMateriales"></td>
+                    <td id="Unidades_a_producir_productoB_SegundoSemestre_RequerimientoMateriales"></td>
+                    <td id="Total_Unidades_Producir_productoB_Anual_RequerimientoMateriales"></td>
+                </tr>
+
+                <tr>
+                    <td></td><td></td><td></td><td></td>
+                </tr>
+
+                <tr>
+                    <td><h4>Material A</h4></td><td></td><td></td><td></td>
+                </tr>
+
+                <tr>
+                    <td>Requerimiento de material</td>
+                    <td id="MaterialA_productoB_PrimerSemestre"></td>
+                    <td id="MaterialA_productoB_SegundoSemestre"></td>
+                    <td id="MaterialA_productoB_Anual"></td>
+                </tr>
+
+                <tr>
+                    <td><b>Total de Material A requerido</b></td>
+                    <td id="Total_materialA_productoB_PrimerSemestre"></td>
+                    <td id="Total_materialA_productoB_SegundoSemestre"></td>
+                    <td id="TotalA_materialA_productoB_Anual"></td>
+                </tr>
+
+                <tr>
+                    <td><h4>Material B</h4></td><td></td><td></td><td></td>
+                </tr>
+
+                <tr>
+                    <td>Requerimiento de material</td>
+                    <td id="MaterialB_productoB_PrimerSemestre"></td>
+                    <td id="MaterialB_productoB_SegundoSemestre"></td>
+                    <td id="MaterialB_productoB_Anual"></td>
+                </tr>
+
+                <tr>
+                    <td><b>Total de Material B requerido</b></td>
+                    <td id="Total_materialB_productoB_PrimerSemestre"></td>
+                    <td id="Total_materialB_productoB_SegundoSemestre"></td>
+                    <td id="TotalA_materialB_productoB_Anual"></td>
+                </tr>
+
+                <tr>
+                    <td><h4>Material C</h4></td><td></td><td></td><td></td>
+                </tr>
+
+                <tr>
+                    <td>Requerimiento de material</td>
+                    <td id="MaterialC_productoB_PrimerSemestre"></td>
+                    <td id="MaterialC_productoB_SegundoSemestre"></td>
+                    <td id="MaterialC_productoB_Anual"></td>
+                </tr>
+
+                <tr>
+                    <td><b>Total de Material C requerido</b></td>
+                    <td id="Total_materialC_productoB_PrimerSemestre"></td>
+                    <td id="Total_materialC_productoB_SegundoSemestre"></td>
+                    <td id="TotalA_materialC_productoB_Anual"></td>
+                </tr>
+
+                <tr>
+                    <td></td><td></td><td></td><td></td>
+                </tr>
+
+                <tr>
+                    <td><h3>Producto C</h3></td><td></td><td></td><td></td>
+                </tr>
+
+                <tr>
+                    <td>Unidades a producir</td>
+                    <td id="Unidades_a_producir_productoC_PrimerSemestre_RequerimientoMateriales"></td>
+                    <td id="Unidades_a_producir_productoC_SegundoSemestre_RequerimientoMateriales"></td>
+                    <td id="Total_Unidades_Producir_productoC_Anual_RequerimientoMateriales"></td>
+                </tr>
+
+                <tr>
+                    <td></td><td></td><td></td><td></td>
+                </tr>
+
+                <tr>
+                    <td><h4>Material A</h4></td><td></td><td></td><td></td>
+                </tr>
+
+                <tr>
+                    <td>Requerimiento de material</td>
+                    <td id="MaterialA_productoC_PrimerSemestre"></td>
+                    <td id="MaterialA_productoC_SegundoSemestre"></td>
+                    <td id="MaterialA_productoC_Anual"></td>
+                </tr>
+
+                <tr>
+                    <td><b>Total de Material A requerido</b></td>
+                    <td id="Total_materialA_productoC_PrimerSemestre"></td>
+                    <td id="Total_materialA_productoC_SegundoSemestre"></td>
+                    <td id="TotalA_materialA_productoC_Anual"></td>
+                </tr>
+
+                <tr>
+                    <td><h4>Material B</h4></td><td></td><td></td><td></td>
+                </tr>
+
+                <tr>
+                    <td>Requerimiento de material</td>
+                    <td id="MaterialB_productoC_PrimerSemestre"></td>
+                    <td id="MaterialB_productoC_SegundoSemestre"></td>
+                    <td id="MaterialB_productoC_Anual"></td>
+                </tr>
+
+                <tr>
+                    <td><b>Total de Material B requerido</b></td>
+                    <td id="Total_materialB_productoC_PrimerSemestre"></td>
+                    <td id="Total_materialB_productoC_SegundoSemestre"></td>
+                    <td id="TotalA_materialB_productoC_Anual"></td>
+                </tr>
+
+                <tr>
+                    <td><h4>Material C</h4></td><td></td><td></td><td></td>
+                </tr>
+
+                <tr>
+                    <td>Requerimiento de material</td>
+                    <td id="MaterialC_productoC_PrimerSemestre"></td>
+                    <td id="MaterialC_productoC_SegundoSemestre"></td>
+                    <td id="MaterialC_productoC_Anual"></td>
+                </tr>
+
+                <tr>
+                    <td><b>Total de Material C requerido</b></td>
+                    <td id="Total_materialC_productoC_PrimerSemestre"></td>
+                    <td id="Total_materialC_productoC_SegundoSemestre"></td>
+                    <td id="TotalA_materialC_productoC_Anual"></td>
+                </tr>
+
+                <tr>
+                    <td></td><td></td><td></td><td></td>
+                </tr>
+
+                <tr>
+                    <td></td><td></td><td></td><td></td>
+                </tr>
+
+                <tr>
+                    <td><h3>Total de Requerimientos </h3></td><td></td><td></td><td></td>
+                </tr>
+
+                <tr>
+                    <td>Material A</td>
+                    <td id="Total_materialA_PrimerSemestre"></td>
+                    <td id="Total_materialA_SegundoSemestre"></td>
+                    <td id="Total_materialA_Anual"></td>
+                </tr>
+
+                <tr>
+                    <td>Material B</td>
+                    <td id="Total_materialB_PrimerSemestre"></td>
+                    <td id="Total_materialB_SegundoSemestre"></td>
+                    <td id="Total_materialB_Anual"></td>
+                </tr>
+
+                <tr>
+                    <td>Material C</td>
+                    <td id="Total_materialC_PrimerSemestre"></td>
+                    <td id="Total_materialC_SegundoSemestre"></td>
+                    <td id="Total_materialC_Anual"></td>
+                </tr>
+
+                <tr>
+                    <td></td><td></td><td></td><td></td>
+                </tr>
+
+
+            </table>
+
+            <br><br><br>
+
+            <table>
+                <thead>
+                    <tr>
+                        <td colspan="4">
+                            <center>
+                            <h1>
+                                5. Presupuesto de Compra de Materiales
+                            </h1>
+                            </center>
+                        </td>
+                    </tr>
+                </thead>
+
+                <tr>
+                    <td></td><td><h2>1er Semestre</h2></td><td><h2>2do Semestre</h2></td><td><h2>Total Anual</h2></td>
+                </tr>
+
+                <tr>
+                    <td><h3>Material A</h3></td><td></td><td></td><td></td>
+                </tr>
+
+                <tr>
+                    <td>Requerimiento de materiales</td>
+                    <td id="TotalA_PrimerSemestre"></td>
+                    <td id="TotalA_SegundoSemestre"></td>
+                    <td id="TotalA_Anual"></td>
+                </tr>
+
+                <tr>
+                    <td>( + ) Inventario Final</td>
+                    <td id="Inventario_final_MaterialA_PrimerSemestre"></td>
+                    <td id="Inventario_final_MaterialA_SegundoSemestre"></td>
+                    <td id="Inventario_final_MaterialA_Anual"></td>
+                </tr>
+
+                <tr>
+                    <td>Total de Materiales</td>
+                    <td id="Total_de_MaterialA_PrimerSemestre"></td>
+                    <td id="Total_de_MaterialA_SegundoSemestre"></td>
+                    <td id="Total_de_MaterialA_Anual"></td>
+                </tr>
+
+                <tr>
+                    <td>( - ) Inventario Inicial</td>
+                    <td id="Inventario_inicial_MaterialA_PrimerSemestre"></td>
+                    <td id="Inventario_inicial_MaterialA_SegundoSemestre"></td>
+                    <td id="Inventario_inicial_MaterialA_Anual"></td>
+                </tr>
+
+                <tr>
+                    <td><h4>Material a comprar</h4></td>
+                    <td id="Material_comprar_MaterialA_PrimerSemestre"></td>
+                    <td id="Material_comprar_MaterialA_SegundoSemestre"></td>
+                    <td id="Material_comprar_MaterialA_Anual"></td>
+                </tr>
+
+                <tr>
+                    <td><h4>Precio de Compra</h4></td>
+                    <td id="Precio_compra_MaterialA_PrimerSemestre"></td>
+                    <td id="Precio_compra_MaterialA_SegundoSemestre"></td><td></td>
+                </tr>
+
+                <tr>
+                    <td><h4>Total de Material A en $:</h4></td>
+                    <td id="Total_precio_MaterialA_PrimerSemestre"></td>
+                    <td id="Total_precio_MaterialA_SegundoSemestre"></td>
+                    <td id="Total_precio_MaterialA_Anual"></td>
+                </tr>
+
+                <tr>
+                    <td><h3>Material B</h3></td><td></td><td></td><td></td>
+                </tr>
+
+                <tr>
+                    <td>Requerimiento de materiales</td>
+                    <td id="TotalB_PrimerSemestre"></td>
+                    <td id="TotalB_SegundoSemestre"></td>
+                    <td id="TotalB_Anual"></td>
+                </tr>
+
+                <tr>
+                    <td>( + ) Inventario Final</td>
+                    <td id="Inventario_final_MaterialB_PrimerSemestre"></td>
+                    <td id="Inventario_final_MaterialB_SegundoSemestre"></td>
+                    <td id="Inventario_final_MaterialB_Anual"></td>
+                </tr>
+
+                <tr>
+                    <td>Total de Materiales</td>
+                    <td id="Total_de_MaterialB_PrimerSemestre"></td>
+                    <td id="Total_de_MaterialB_SegundoSemestre"></td>
+                    <td id="Total_de_MaterialB_Anual"></td>
+                </tr>
+
+                <tr>
+                    <td>( - ) Inventario Inicial</td>
+                    <td id="Inventario_inicial_MaterialB_PrimerSemestre"></td>
+                    <td id="Inventario_inicial_MaterialB_SegundoSemestre"></td>
+                    <td id="Inventario_inicial_MaterialB_Anual"></td>
+                </tr>
+
+                <tr>
+                    <td><h4>Material a comprar</h4></td>
+                    <td id="Material_comprar_MaterialB_PrimerSemestre"></td>
+                    <td id="Material_comprar_MaterialB_SegundoSemestre"></td>
+                    <td id="Material_comprar_MaterialB_Anual"></td>
+                </tr>
+
+                <tr>
+                    <td><h4>Precio de Compra</h4></td>
+                    <td id="Precio_compra_MaterialB_PrimerSemestre"></td>
+                    <td id="Precio_compra_MaterialB_SegundoSemestre"></td>
+                    <td></td>
+                </tr>
+
+                <tr>
+                    <td><h4>Total de Material B en $:</h4></td>
+                    <td id="Total_precio_MaterialB_PrimerSemestre"></td>
+                    <td id="Total_precio_MaterialB_SegundoSemestre"></td>
+                    <td id="Total_precio_MaterialB_Anual"></td>
+                </tr>
+
+                <tr>
+                    <td><h3>Material C</h3></td><td></td><td></td><td></td>
+                </tr>
+
+                <tr>
+                    <td>Requerimiento de materiales</td>
+                    <td id="TotalC_PrimerSemestre"></td>
+                    <td id="TotalC_SegundoSemestre"></td>
+                    <td id="TotalC_Anual"></td>
+                </tr>
+
+                <tr>
+                    <td>( + ) Inventario Final</td>
+                    <td id="Inventario_final_MaterialC_PrimerSemestre"></td>
+                    <td id="Inventario_final_MaterialC_SegundoSemestre"></td>
+                    <td id="Inventario_final_MaterialC_Anual"></td>
+                </tr>
+
+                <tr>
+                    <td>Total de Materiales</td>
+                    <td id="Total_de_MaterialC_PrimerSemestre"></td>
+                    <td id="Total_de_MaterialC_SegundoSemestre"></td>
+                    <td id="Total_de_MaterialC_Anual"></td>
+                    
+                </tr>
+
+                <tr>
+                    <td>( - ) Inventario Inicial</td>
+                    <td id="Inventario_inicial_MaterialC_PrimerSemestre"></td>
+                    <td id="Inventario_inicial_MaterialC_SegundoSemestre"></td>
+                    <td id="Inventario_inicial_MaterialC_Anual"></td>
+                </tr>
+
+                <tr>
+                    <td><h4>Material a comprar</h4></td>
+                    <td id="Material_comprar_MaterialC_PrimerSemestre"></td>
+                    <td id="Material_comprar_MaterialC_SegundoSemestre"></td>
+                    <td id="Material_comprar_MaterialC_Anual"></td>
+                </tr>
+
+                <tr>
+                    <td><h4>Precio de Compra</h4></td>
+                    <td id="Precio_compra_MaterialC_PrimerSemestre"></td>
+                    <td id="Precio_compra_MaterialC_SegundoSemestre"></td>
+                    <td></td>
+                </tr>
+
+                <tr>
+                    <td><h4>Total de Material C en $:</h4></td>
+                    <td id="Total_precio_MaterialC_PrimerSemestre"></td>
+                    <td id="Total_precio_MaterialC_SegundoSemestre"></td>
+                    <td id="Total_precio_MaterialC_Anual"></td>
+                </tr>
+
+                <tr>
+                    <td></td><td></td><td></td><td></td>
+                </tr>
+
+                <tr>
+                    <td><h3>Compras totales</h3></td>
+                    <td id="Total_precio_Material_PrimerSemeste"></td>
+                    <td id="Total_precio_Material_SegundoSemeste"></td>
+                    <td id="Total_precio_Material_Anual"></td>
+                </tr>
+
+                <tr>
+                    <td></td><td></td><td></td><td></td>
+                </tr>
+
+            </table>
+
+            <br><br><br>
+
+            <table>
+
+                <thead>
+                    <tr>
+                        <td colspan="4">
+                            <center>
+                            <h1>
+                                6. Determinación del saldo de Proveedores y Flujo de Salidas
+                            </h1>
+                            </center>
+                        </td>
+                    </tr>
+                </thead>
+
+                <tr>
+                    <td><h2>Descripción</h2></td><td><h2>Importe</h2></td><td><h2>Total</h2></td><td></td>
+                </tr>
+
+                <tr>
+                    <td><b>Saldo de Proveedores 31-Dic-2020</b></td>
+                    <td></td>
+                    <td id="Saldo_Proveedores_Pasado"></td>
+                    <td></td>
+                </tr>
+
+                <tr>
+                    <td>Compras 2021</td>
+                    <td></td>
+                    <td id="Total_Compras_Actual"></td>
+                    <td></td>
+                </tr>
+
+                <tr>
+                    <td>Total de Proveedores 2021</td>
+                    <td></td>
+                    <td id="Total_proveedores_Actual"></td>
+                    <td></td>
+                </tr>
+
+                <tr>
+                    <td></td><td></td><td></td><td></td>
+                </tr>
+
+                <tr>
+                    <td><b>Salidas de Efectivo:</b></td><td></td><td></td><td></td>
+                </tr>
+
+                <tr>
+                    <td>Por Proveedores del 2020</td>
+                    <td id="PorProveedor_Pasado"></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+
+                <tr>
+                    <td>Por Proveedores del 2021</td>
+                    <td id="PorCompras_Actual"></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+
+                <tr>
+                    <td>Total de Salidas 2021:</td>
+                    <td></td>
+                    <td id="Total_Salidas_Actual"></td>
+                    <td></td>
+                </tr>
+
+                <tr>
+                    <td></td><td></td><td></td><td></td>
+                </tr>
+
+                <tr>
+                    <td><h3>Saldo de Proveedores del 2021</h3></td>
+                    <td></td>
+                    <td id="Saldo_Proveedores_Actual"></td>
+                    <td></td>
+                </tr>
+
+                <tr>
+                    <td></td><td></td><td></td><td></td>
+                </tr>
+
+            </table>
+
+            <br><br><br>
+
+            <table>
+                <thead>
+                    <tr>
+                        <td colspan="4">
+                            <center>
+                            <h1>
+                                7. Presupuesto de Mano de Obra Directa
+                            </h1>
+                            </center>
+                        </td>
+                    </tr>
+                </thead>
+
+                <tr>
+                    <td></td><td><h2>1er Semestre</h2></td><td><h2>2do Semestre</h2></td><td><h2>Total Anual</h2></td>
+                </tr>
+
+                <tr>
+                    <td><h3>PRODUCTO A</h3></td><td></td><td></td><td></td>
+                </tr>
+
+                <tr>
+                    <td>Unidades a producir</td>
+                    <td id="ProduccionProductoA_PrimerSemestre"></td>
+                    <td id="ProduccionProductoA_SegundoSemestre"></td>
+                    <td id="ProduccionProductoA_Anual"></td>
+                </tr>
+
+                <tr>
+                    <td>Horas requeridas por unidad</td>
+                    <td id="HorasProductoA_PrimerSemestre"></td>
+                    <td id="HorasProductoA_SegundoSemestre"></td>
+                    <td id="HorasProductoA_Anual"></td>
+                </tr>
+
+                <tr>
+                    <td><b>Total de horas requeridas</b></td>
+                    <td id="TotalHorasProductoA_PrimerSemestre"></td>
+                    <td id="TotalHorasProductoA_SegundoSemestre"></td>
+                    <td id="TotalHorasProductoA_Anual"></td>
+                </tr>
+
+                <tr>
+                    <td>Cuota por hora</td>
+                    <td id="CuotaHoraProductoA_PrimerSemestre"></td>
+                    <td id="CuotaHoraProductoA_SegundoSemestre"></td>
+                    <td></td>
+                </tr>
+
+                <tr>
+                    <td><h4>Importe de M.O.D.</h4></td>
+                    <td id="ImporteMODProductoA_PrimerSemestre"></td>
+                    <td id="ImporteMODProductoA_SegundoSemestre"></td>
+                    <td id="ImporteMODProductoA_Anual"></td>
+                </tr>
+
+                <tr>
+                    <td></td><td></td><td></td><td></td>
+                </tr>
+
+                <tr>
+                    <td><h3>PRODUCTO B</h3></td><td></td><td></td><td></td>
+                </tr>
+
+                <tr>
+                    <td>Unidades a producir</td>
+                    <td id="ProduccionProductoB_PrimerSemestre"></td>
+                    <td id="ProduccionProductoB_SegundoSemestre"></td>
+                    <td id="ProduccionProductoB_Anual"></td>
+                </tr>
+
+                <tr>
+                    <td>Horas requeridas por unidad</td>
+                    <td id="HorasProductoB_PrimerSemestre"></td>
+                    <td id="HorasProductoB_SegundoSemestre"></td>
+                    <td id="HorasProductoB_Anual"></td>
+                </tr>
+
+                <tr>
+                    <td><b>Total de horas requeridas</b></td>
+                    <td id="TotalHorasProductoB_PrimerSemestre"></td>
+                    <td id="TotalHorasProductoB_SegundoSemestre"></td>
+                    <td id="TotalHorasProductoB_Anual"></td>
+                </tr>
+
+                <tr>
+                    <td>Cuota por hora</td>
+                    <td id="CuotaHoraProductoB_PrimerSemestre"></td>
+                    <td id="CuotaHoraProductoB_SegundoSemestre"></td>
+                    <td></td>
+                </tr>
+
+                <tr>
+                    <td><h4>Importe de M.O.D.</h4></td>
+                    <td id="ImporteMODProductoB_PrimerSemestre"></td>
+                    <td id="ImporteMODProductoB_SegundoSemestre"></td>
+                    <td id="ImporteMODProductoB_Anual"></td>
+                </tr>
+
+                <tr>
+                    <td></td><td></td><td></td><td></td>
+                </tr>
+
+                <tr>
+                    <td><h3>PRODUCTO C</h3></td><td></td><td></td><td></td>
+                </tr>
+
+                <tr>
+                    <td>Unidades a producir</td>
+                    <td id="ProduccionProductoC_PrimerSemestre"></td>
+                    <td id="ProduccionProductoC_SegundoSemestre"></td>
+                    <td id="ProduccionProductoC_Anual"></td>
+                </tr>
+
+                <tr>
+                    <td>Horas requeridas por unidad</td>
+                    <td id="HorasProductoC_PrimerSemestre"></td>
+                    <td id="HorasProductoC_SegundoSemestre"></td>
+                    <td id="HorasProductoC_Anual"></td>
+                </tr>
+
+                <tr>
+                    <td><b>Total de horas requeridas</b></td>
+                    <td id="TotalHorasProductoC_PrimerSemestre"></td>
+                    <td id="TotalHorasProductoC_SegundoSemestre"></td>
+                    <td id="TotalHorasProductoC_Anual"></td>
+                </tr>
+
+                <tr>
+                    <td>Cuota por hora</td>
+                    <td id="CuotaHoraProductoC_PrimerSemestre"></td>
+                    <td id="CuotaHoraProductoC_SegundoSemestre"></td>
+                    <td></td>
+                </tr>
+
+                <tr>
+                    <td><h4>Importe de M.O.D.</h4></td>
+                    <td id="ImporteMODProductoC_PrimerSemestre"></td>
+                    <td id="ImporteMODProductoC_SegundoSemestre"></td>
+                    <td id="ImporteMODProductoC_Anual"></td>
+                </tr>
+
+                <tr>
+                    <td></td><td></td><td></td><td></td>
+                </tr>
+
+                <tr>
+                    <td><b>Total de horas requeridas por semestre</b></td>
+                    <td id="TotalHoras_PrimerSemestre"></td>
+                    <td id="TotalHoras_SegundoSemestre"></td>
+                    <td id="TotalHoras_Anual"></td>
+                </tr>
+
+                <tr>
+                    <td><h4>Total de M.O.D. por semestre</h4></td>
+                    <td id="TotalMOD_PrimerSemestre"></td>
+                    <td id="TotalMOD_SegundoSemestre"></td>
+                    <td id="TotalMOD_Anual"></td>
+                </tr>
+
+                <tr>
+                    <td></td><td></td><td></td><td></td>
+                </tr>
+
+            </table>
+
+            <br><br><br>
+
+            <table>
+                <thead>
+                    <tr>
+                        <td colspan="4">
+                            <center>
+                            <h1>
+                                8. Presupuesto de Gastos Indirectos de Fabricación
+                            </h1>
+                            </center>
+                        </td>
+                    </tr>
+                </thead>
+
+                <tr>
+                    <td></td><td><h2>1er Semestre</h2></td><td><h2>2do Semestre</h2></td><td><h2>Total Anual</h2></td>
+                </tr>
+
+                <tr>
+                    <td>Depreciación</td>
+                    <td id="DepreciacionFI_PrimerSemestre"></td>
+                    <td id="DepreciacionFI_SegundoSemestre"></td>
+                    <td id="DepreciacionFI_Anual"></td>
+                </tr>
+
+                <tr>
+                    <td>Seguros</td>
+                    <td id="SegurosFI_PrimerSemestre"></td>
+                    <td id="SegurosFI_SegundoSemestre"></td>
+                    <td id="SegurosFI_Anual"></td>
+                </tr>
+
+                <tr>
+                    <td>Mantenimiento</td>
+                    <td id="MantenimientoFI_PrimerSemestre"></td>
+                    <td id="MantenimientoFI_SegundoSemestre"></td>
+                    <td id="MantenimientoFI_Anual"></td>
+                </tr>
+
+                <tr>
+                    <td>Energéticos</td>
+                    <td id="EnergeticosFI_PrimerSemestre"></td>
+                    <td id="EnergeticosFI_SegundoSemestre"></td>
+                    <td id="EnergeticosFI_Anual"></td>
+                </tr>
+
+                <tr>
+                    <td>Varios</td>
+                    <td id="VariosFI_PrimerSemestre"></td>
+                    <td id="VariosFI_SegundoSemestre"></td>
+                    <td id="VariosFI_Anual"></td>
+                </tr>
+
+                <tr>
+                    <td><h4>Total G.I.F. por semestre</h4></td>
+                    <td id="TotalGIF_PrimerSemestre"></td>
+                    <td id="TotalGIF_SegundoSemestre"></td>
+                    <td id="TotalGIF_Anual"></td>
+                </tr>
+
+                <tr>
+                    <td colspan="4"><h3>Coeficiente para determinar el costo por hora de Gastos Indirectos de Fabricación</h3></td>
+                </tr>
+
+                <tr>
+                    <td></td><td></td><td></td><td></td>
+                </tr>
+
+                <tr>
+                    <td>Total de G.I.F.</td>
+                    <td></td>
+                    <td></td>
+                    <td id="TotalGIF_Coeficiente"></td>
+                </tr>
+
+                <tr>
+                    <td>(/) Total horas M.O.D. Anual</td>
+                    <td></td>
+                    <td></td>
+                    <td id="TotalMOD_Coeficiente"></td>
+                </tr>
+
+                <tr>
+                    <td><h4>(=) Costo por Hora de G.I.F.</h4></td>
+                    <td></td>
+                    <td></td>
+                    <td id="CostoHoraGIF_Coeficiente"></td>
+                </tr>
+
+                <tr>
+                    <td></td><td></td><td></td><td></td>
+                </tr>
+
+            </table>
+
+            <br><br><br>
+
+            <table>
+                
+                <thead>
+                    <tr>
+                        <td colspan="4">
+                            <center>
+                            <h1>
+                                9. Presupuesto de Gastos de Operación
+                            </h1>
+                            </center>
+                        </td>
+                    </tr>
+                </thead>
+
+                <tr>
+                    <td></td><td><h2>1er Semestre</h2></td><td><h2>2do Semestre</h2></td><td><h2>Total Anual</h2></td>
+                </tr>
+
+                <tr>
+                    <td>Depreciación</td>
+                    <td id="DepreciacionGO_PrimerSemestre"></td>
+                    <td id="DepreciacionGO_SegundoSemestre"></td>
+                    <td id="DepreciacionGO_Anual"></td>
+                </tr>
+
+                <tr>
+                    <td>Sueldos y Salarios</td>
+                    <td id="SueldosGO_PrimerSemestre"></td>
+                    <td id="SueldosGO_SegundoSemestre"></td>
+                    <td id="SueldosGO_Anual"></td>
+                </tr>
+
+                <tr>
+                    <td>Comisiones</td>
+                    <td id="ComisionesGO_PrimerSemestre"></td>
+                    <td id="ComisionesGO_SegundoSemestre"></td>
+                    <td id="ComisionesGO_Anual"></td>
+                </tr>
+
+                <tr>
+                    <td>Varios</td>
+                    <td id="VariosGO_PrimerSemestre"></td>
+                    <td id="VariosGO_SegundoSemestre"></td>
+                    <td id="VariosGO_Anual"></td>
+                </tr>
+
+                <tr>
+                    <td>Intereses por Obligaciones</td>
+                    <td id="InteresesGO_PrimerSemestre"></td>
+                    <td id="InteresesGO_SegundoSemestre"></td>
+                    <td id="InteresesGO_Anual"></td>
+                </tr>
+
+                <tr>
+                    <td><h4>Total de Gastos de Operación:</h4></td>
+                    <td id="TotalGO_PrimerSemestre"></td>
+                    <td id="TotalGO_SegundoSemestre"></td>
+                    <td id="TotalGO_Anual"></td>
+                </tr>
+
+                <tr>
+                    <td></td><td></td><td></td><td></td>
+                </tr>
+
+            </table>
+
+            <br><br><br>
+
+            <table>
+                <thead>
+                    <tr>
+                        <td colspan="4">
+                            <center>
+                            <h1>
+                                10. Determinación del Costo Unitario de Productos Terminados
+                            </h1>
+                            </center>
+                        </td>
+                    </tr>
+                </thead>
+
+                <tr>
+                    <td rowspan="2"><center><h2>Descripción</h2></center></td> <td colspan="3"><center><h2>PRODUCTO A</h2></center></td>
+                </tr>
+
+                <tr>
+                    <td><h3>Costo</h3></td><td><h3>Cantidad</h3></td><td><h3>Costo unitario</h3></td>
+                </tr>
+
+                <tr>
+                    <td>Material A</td>
+                    <td id="CostoMaterialA_ProductoA"></td>
+                    <td id="CantidadMaterialA_ProductoA"></td>
+                    <td id="CostoUnitarioMaterialA_ProductoA"></td>
+                </tr>
+
+                <tr>
+                    <td>Material B</td>
+                    <td id="CostoMaterialB_ProductoA"></td>
+                    <td id="CantidadMaterialB_ProductoA"></td>
+                    <td id="CostoUnitarioMaterialB_ProductoA"></td>
+                </tr>
+
+                <tr>
+                    <td>Material C</td>
+                    <td id="CostoMaterialC_ProductoA"></td>
+                    <td id="CantidadMaterialC_ProductoA"></td>
+                    <td id="CostoUnitarioMaterialC_ProductoA"></td>
+                </tr>
+
+                <tr>
+                    <td>Mano de Obra</td>
+                    <td id="CostoMOD_ProductoA"></td>
+                    <td id="CantidadHorasMOD_ProductoA"></td>
+                    <td id="CostoUnitarioMOD_ProductoA"></td>
+                </tr>
+
+                <tr>
+                    <td>Gastos Indirectos de Fabricación</td>
+                    <td id="CostoGIF_ProductoA"></td>
+                    <td id="CantidadGIF_ProductoA"></td>
+                    <td id="CostoUnitarioGIF_ProductoA"></td>
+                </tr>
+
+                <tr>
+                    <td><h4>Costo Unitario</h4></td>
+                    <td></td>
+                    <td></td>
+                    <td id="CostoUnitarioProductoA"></td>
+                </tr>
+
+                <tr>
+                    <td></td><td></td><td></td><td></td>
+                </tr>
+
+                <tr>
+                    <td rowspan="2"><center><h2>Descripción</h2></center></td> <td colspan="3"><center><h2>PRODUCTO B</h2></center></td>
+                </tr>
+
+                <tr>
+                    <td><h3>Costo</h3></td><td><h3>Cantidad</h3></td><td><h3>Costo unitario</h3></td>
+                </tr>
+
+                <tr>
+                    <td>Material A</td>
+                    <td id="CostoMaterialA_ProductoB"></td>
+                    <td id="CantidadMaterialA_ProductoB"></td>
+                    <td id="CostoUnitarioMaterialA_ProductoB"></td>
+                </tr>
+
+                <tr>
+                    <td>Material B</td>
+                    <td id="CostoMaterialB_ProductoB"></td>
+                    <td id="CantidadMaterialB_ProductoB"></td>
+                    <td id="CostoUnitarioMaterialB_ProductoB"></td>
+                </tr>
+
+                <tr>
+                    <td>Material C</td>
+                    <td id="CostoMaterialC_ProductoB"></td>
+                    <td id="CantidadMaterialC_ProductoB"></td>
+                    <td id="CostoUnitarioMaterialC_ProductoB"></td>
+                </tr>
+
+                <tr>
+                    <td>Mano de Obra</td>
+                    <td id="CostoMOD_ProductoB"></td>
+                    <td id="CantidadHorasMOD_ProductoB"></td>
+                    <td id="CostoUnitarioMOD_ProductoB"></td>
+                </tr>
+
+                <tr>
+                    <td>Gastos Indirectos de Fabricación</td>
+                    <td id="CostoGIF_ProductoB"></td>
+                    <td id="CantidadGIF_ProductoB"></td>
+                    <td id="CostoUnitarioGIF_ProductoB"></td>
+                </tr>
+
+                <tr>
+                    <td><h4>Costo Unitario</h4></td>
+                    <td></td>
+                    <td></td>
+                    <td id="CostoUnitarioProductoB"></td>
+                </tr>
+
+                <tr>
+                    <td></td><td></td><td></td><td></td>
+                </tr>
+
+                <tr>
+                    <td rowspan="2"><center><h2>Descripción</h2></center></td> <td colspan="3"><center><h2>PRODUCTO C</h2></center></td>
+                </tr>
+
+                <tr>
+                    <td><h3>Costo</h3></td><td><h3>Cantidad</h3></td><td><h3>Costo unitario</h3></td>
+                </tr>
+
+                <tr>
+                    <td>Material A</td>
+                    <td id="CostoMaterialA_ProductoC"></td>
+                    <td id="CantidadMaterialA_ProductoC"></td>
+                    <td id="CostoUnitarioMaterialA_ProductoC"></td>
+                </tr>
+
+                <tr>
+                    <td>Material B</td>
+                    <td id="CostoMaterialB_ProductoC"></td>
+                    <td id="CantidadMaterialB_ProductoC"></td>
+                    <td id="CostoUnitarioMaterialB_ProductoC"></td>
+                </tr>
+
+                <tr>
+                    <td>Material C</td>
+                    <td id="CostoMaterialC_ProductoC"></td>
+                    <td id="CantidadMaterialC_ProductoC"></td>
+                    <td id="CostoUnitarioMaterialC_ProductoC"></td>
+                </tr>
+
+                <tr>
+                    <td>Mano de Obra</td>
+                    <td id="CostoMOD_ProductoC"></td>
+                    <td id="CantidadHorasMOD_ProductoC"></td>
+                    <td id="CostoUnitarioMOD_ProductoC"></td>
+                </tr>
+
+                <tr>
+                    <td>Gastos Indirectos de Fabricación</td>
+                    <td id="CostoGIF_ProductoC"></td>
+                    <td id="CantidadGIF_ProductoC"></td>
+                    <td id="CostoUnitarioGIF_ProductoC"></td>
+                </tr>
+
+                <tr>
+                    <td><h4>Costo Unitario</h4></td>
+                    <td></td>
+                    <td></td>
+                    <td id="CostoUnitarioProductoC"></td>
+                </tr>
+
+                <tr>
+                    <td></td><td></td><td></td><td></td>
+                </tr>
+
+            </table>
+
+            <br><br><br>
+
+            <table>
+
+                <thead>
+                    <tr>
+                        <td colspan="4">
+                            <center>
+                            <h1>
+                                11. Valuación de Inventarios Finales
+                            </h1>
+                            </center>
+                        </td>
+                    </tr>
+                </thead>
+
+                <tr>
+                    <td colspan="4"><center><h2>Inventario Final de Materiales</h2></center></td>
+                </tr>
+
+                <tr>
+                    <td><h3>Descripción</h3></td><td><h3>Unidades</h3></td><td><h3>Costo Unitario</h3></td><td><h3>Costo Total</h3></td>
+                </tr>
+
+                <tr>
+                    <td>Material A</td>
+                    <td id="InventarioFinal_MaterialA_Unidades"></td>
+                    <td id="InventarioFinal_MaterialA_CostoUnitario"></td>
+                    <td id="InventarioFinal_MaterialA_CostoTotal"></td>
+                </tr>
+
+                <tr>
+                    <td>Material B</td>
+                    <td id="InventarioFinal_MaterialB_Unidades"></td>
+                    <td id="InventarioFinal_MaterialB_CostoUnitario"></td>
+                    <td id="InventarioFinal_MaterialB_CostoTotal"></td>
+                </tr>
+
+                <tr>
+                    <td>Material C</td>
+                    <td id="InventarioFinal_MaterialC_Unidades"></td>
+                    <td id="InventarioFinal_MaterialC_CostoUnitario"></td>
+                    <td id="InventarioFinal_MaterialC_CostoTotal"></td>
+                </tr>
+
+                <tr>
+                    <td><h4>Inventario Final de Materiales</h4></td>
+                    <td></td>
+                    <td></td>
+                    <td id="InventarioFinalMateriales"></td>
+                </tr>
+
+                <tr>
+                    <td></td><td></td><td></td><td></td>
+                </tr>
+
+                <tr>
+                    <td colspan="4"><center><h2>Inventario Final de Producto Terminado</h2></center></td>
+                </tr>
+
+                <tr>
+                    <td><h3>Descripción</h3></td><td><h3>Unidades</h3></td><td><h3>Costo Unitario</h3></td><td><h3>Costo Total</h3></td>
+                </tr>
+
+                <tr>
+                    <td>Producto A</td>
+                    <td id="InventarioFinal_ProductoA_Unidades"></td>
+                    <td id="InventarioFinal_ProductoA_CostoUnitario"></td>
+                    <td id="InventarioFinal_ProductoA_CostoTotal"></td>
+                </tr>
+
+                <tr>
+                    <td>Producto B</td>
+                    <td id="InventarioFinal_ProductoB_Unidades"></td>
+                    <td id="InventarioFinal_ProductoB_CostoUnitario"></td>
+                    <td id="InventarioFinal_ProductoB_CostoTotal"></td>
+                </tr>
+
+                <tr>
+                    <td>Producto C</td>
+                    <td id="InventarioFinal_ProductoC_Unidades"></td>
+                    <td id="InventarioFinal_ProductoC_CostoUnitario"></td>
+                    <td id="InventarioFinal_ProductoC_CostoTotal"></td>
+                </tr>
+
+                <tr>
+                    <td><h4>Inventario Final de Producto Terminado</h4></td>
+                    <td></td>
+                    <td></td>
+                    <td id="InventarioFinalProductosTerminados"></td>
+                </tr>
+
+                <tr>
+                    <td></td><td></td><td></td><td></td>
+                </tr>
+
+            </table>
+
+            <br><br><br><br>
+
+            <table>
+                <thead>
+                    <tr>
+                        <td colspan="4">
+                            <center>
+                            <h1>
+                                II. Presupuesto Financiero.
+                            </h1>
+                            </center>
+                        </td>
+                    </tr>
+                </thead>
+            </table>
+
+            <br><br><br>
+
+            <table>
+                <thead>
+                    <tr>
+                        <td colspan="4">
+                            <center>
+                            <h1>
+                                Estado de Costo de Producción y Ventas
+                            </h1>
+                            </center>
+                        </td>
+                    </tr>
+                </thead>
+
+                <tr>
+                    <td colspan="4"><h3><center>Presupuesto del 1 de Enero al 31 de Diciembre del 2020</center></h3></td>
+                </tr>
+
+                <tr>
+                    <td></td><td></td><td></td><td></td>
+                </tr>
+
+                <tr>
+                    <td>Saldo Inicial de Materiales</td>
+                    <td></td>
+                    <td></td>
+                    <td id="SaldoInicialMateriales"></td>
+                </tr>
+
+                <tr>
+                    <td>(+) Compras de Materiales</td>
+                    <td></td>
+                    <td></td>
+                    <td id="ComprasMateriales"></td>
+                </tr>
+
+                <tr>
+                    <td><b>(=) Material Disponible</b></td>
+                    <td></td>
+                    <td></td>
+                    <td id="MaterialDisponible"></td>
+                </tr>
+
+                <tr>
+                    <td>(-) Inventario Final de Materiales</td>
+                    <td></td>
+                    <td></td>
+                    <td id="InventarioFinalMateriales_EstadoCosto"></td>
+                </tr>
+
+                <tr>
+                    <td><b>(=) Materiales Utilizados</b></td>
+                    <td></td>
+                    <td></td>
+                    <td id="MaterialesUtilizados"></td>
+                </tr>
+
+                <tr>
+                    <td>(+) Mano de Obra Directa</td>
+                    <td></td>
+                    <td></td>
+                    <td id="MOD_EstadoCosto"></td>
+                </tr>
+
+                <tr>
+                    <td>(+) Gastos de Fabricación Indirectos</td>
+                    <td></td>
+                    <td></td>
+                    <td id="GIF_EstadoCosto"></td>
+                </tr>
+
+                <tr>
+                    <td><b>(=) Costo de Producción</b></td>
+                    <td></td>
+                    <td></td>
+                    <td id="CostoProduccion_EstadoCosto"></td>
+                </tr>
+
+                <tr>
+                    <td>(+) Inventario Inicial de Productos Terminados</td>
+                    <td></td>
+                    <td></td>
+                    <td id="InventarioInicialProductosTerminados_EstadoCosto"></td>
+                </tr>
+
+                <tr>
+                    <td><b>(=) Total de Producción Disponible</b></td>
+                    <td></td>
+                    <td></td>
+                    <td id="TotalProduccionDisponible_EstadoCosto"></td>
+                </tr>
+
+                <tr>
+                    <td>(-) Inventario Final de Productos Terminados</td>
+                    <td></td>
+                    <td></td>
+                    <td id="InventarioFinalProductosTerminados_EstadoCosto"></td>
+                </tr>
+
+                <tr>
+                    <td><b>(=) Costo de Ventas</b></td>
+                    <td></td>
+                    <td></td>
+                    <td id="CostoVentas_EstadoCosto"></td>
+                </tr>
+
+                <tr>
+                    <td></td><td></td><td></td><td></td>
+                </tr>
+
+            </table>
+
+            <br><br><br>
+
+            <table>
+                <thead>
+                    <tr>
+                        <td colspan="4">
+                            <center>
+                            <h1>
+                                Estado de Resultados
+                            </h1>
+                            </center>
+                        </td>
+                    </tr>
+                </thead>
+
+                <tr>
+                    <td colspan="4"><h3><center>Presupuesto del 1 de Enero al 31 de Diciembre del 2020</center></h3></td>
+                </tr>
+
+                <tr>
+                    <td>Ventas</td>
+                    <td></td>
+                    <td></td>
+                    <td id="Ventas_EstadoResultados"></td>
+                </tr>
+
+                <tr>
+                    <td>(-) Costo de Ventas</td>
+                    <td></td>
+                    <td></td>
+                    <td id="CostoVentas_EstadoResultado"></td>
+                </tr>
+
+                <tr>
+                    <td><b>(=) Utilidad Bruta</b></td>
+                    <td></td>
+                    <td></td>
+                    <td id="UtilidadBruta_EstadoResultado"></td>
+                </tr>
+
+                <tr>
+                    <td>(-) Gastos de Operación</td>
+                    <td></td>
+                    <td></td>
+                    <td id="GastoOperacion_EstadoResultado"></td>
+                </tr>
+
+                <tr>
+                    <td><b>(=) Utilidad de Operación</b></td>
+                    <td></td>
+                    <td></td>
+                    <td id="UtilidadOperaciones_EstadoResultado"></td>
+                </tr>
+
+                <tr>
+                    <td>(-) ISR</td>
+                    <td></td>
+                    <td></td>
+                    <td id="ISR_EstadoResultado"></td>
+                </tr>
+
+                <tr>
+                    <td>(-) PTU</td>
+                    <td></td>
+                    <td></td>
+                    <td id="PTU_EstadoResultado"></td>
+                </tr>
+
+                <tr>
+                    <td><h4>(=) Utilidad Neta</h4></td>
+                    <td></td>
+                    <td></td>
+                    <td id="UtilidadNeta_EstadoResultado"></td>
+                </tr>
+
+                <tr>
+                    <td></td><td></td><td></td><td></td>
+                </tr>
+
+            </table>
+
+            <br><br><br>
+
+            <table>
+                <thead>
+                    <tr>
+                        <td colspan="4">
+                            <center>
+                            <h1>
+                                Estado de Flujo de Efectivo
+                            </h1>
+                            </center>
+                        </td>
+                    </tr>
+                </thead>
+
+                <tr>
+                    <td colspan="4"><h3><center>Presupuesto del 1 de Enero al 31 de Diciembre del 2020</center></h3></td>
+                </tr>
+
+                <tr>
+                    <td><h3>Saldo Inicial de Efectivo</h3></td>
+                    <td></td>
+                    <td></td>
+                    <td id="SaldoInicialEfectivo_EstadoFlujoEfectivo"></td>
+                </tr>
+
+                <tr>
+                    <td><b>Entradas</b></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+
+                <tr>
+                    <td>Cobranza 2020</td>
+                    <td></td>
+                    <td id="CobranzaPasado_FlujoEfectivo"></td>
+                    <td></td>
+                </tr>
+
+                <tr>
+                    <td>Cobranza 2021</td>
+                    <td></td>
+                    <td id="CobranzaActual_FlujoEfectivo"></td>
+                    <td></td>
+                </tr>
+
+                <tr>
+                    <td><b>Total de Entradas</b></td>
+                    <td></td>
+                    <td></td>
+                    <td id="TotalEntradas_FlujoEfectivo"></td>
+                </tr>
+
+                <tr>
+                    <td><h3>Efectivo disponible</h3></td>
+                    <td></td>
+                    <td></td>
+                    <td id="EfectivoDisponible_FlujoEfectivo"></td>
+                </tr>
+
+                <tr>
+                    <td><b>Salidas</b></td><td></td><td></td><td></td>
+                </tr>
+
+                <tr>
+                    <td>Proveedores 2020</td>
+                    <td></td>
+                    <td id="ProvedoresPasado_FlujoEfectivo"></td>
+                    <td></td>
+                </tr>
+
+                <tr>
+                    <td>Proveedores 2021</td>
+                    <td></td>
+                    <td id="ProveedoresActual_FlujoEfectivo"></td>
+                    <td></td>
+                </tr>
+
+                <tr>
+                    <td>Pago Mano de Obra Directa</td>
+                    <td></td>
+                    <td id="PagoMOD_FlujoEfectivo"></td>
+                    <td></td>
+                </tr>
+
+                <tr>
+                    <td>Pago Gastos Indirectos de Fabricación</td>
+                    <td></td>
+                    <td id="PagoGIF_FlujoEfectivo"></td>
+                    <td></td>
+                </tr>
+
+                <tr>
+                    <td>Pago de Gastos de Operación</td>
+                    <td></td>
+                    <td id="PagoGO_FlujoEfectivo"></td>
+                    <td></td>
+                </tr>
+
+                <tr>
+                    <td>Compra de Activo Fijo (Maquinaria)</td>
+                    <td></td>
+                    <td id="CompraActivo_FlujoEfectivo"></td>
+                    <td></td>
+                </tr>
+
+                <tr>
+                    <td>Pago ISR 2020</td>
+                    <td></td>
+                    <td id="PasadoISR_FlujoEfectivo"></td>
+                    <td></td>
+                </tr>
+
+                <tr>
+                    <td>Pago ISR 2021</td>
+                    <td></td>
+                    <td id="ActualISR_FlujoEfectivo"></td>
+                    <td></td>
+                </tr>
+
+                <tr>
+                    <td><b>Total de salidas</b></td>
+                    <td></td>
+                    <td></td>
+                    <td id="TotalSalidas_FlujoEfectivo"></td>
+                </tr>
+
+                <tr>
+                    <td><h3>Flujo de Efectivo Actual</h3></td>
+                    <td></td>
+                    <td></td>
+                    <td id="FlujoEfectivoActual"></td>
+                </tr>
+
+                <tr>
+                    <td></td><td></td><td></td><td></td>
+                </tr>
+
+            </table>
+
+            <br><br><br>
+
+            <table>
+                <thead>
+                    <tr>
+                        <td colspan="4">
+                            <center>
+                            <h1>
+                                Balance General
+                            </h1>
+                            </center>
+                        </td>
+                    </tr>
+                </thead>
+
+                <tr>
+                    <td colspan="4"><h3><center>Presupuesto al 31 de Diciembre del 2021</center></h3></td>
+                </tr>
+
+                <tr>
+                    <td><h3>ACTIVO</h3></td><td></td><td></td><td></td>
+                </tr>
+
+                <tr>
+                    <td><b>Circulante</b></td><td></td><td></td><td></td>
+                </tr>
+
+                <tr>
+                    <td>Efectivo</td>
+                    <td></td>
+                    <td id="Efectivo_BalanceGeneral"></td>
+                    <td></td>
+                </tr>
+
+                <tr>
+                    <td>Clientes</td>
+                    <td></td>
+                    <td id="Clientes_BalanceGeneral"></td>
+                    <td></td>
+                </tr>
+
+                <tr>
+                    <td>Inventario de Materiales</td>
+                    <td></td>
+                    <td id="InventarioMateriales_BalanceGeneral"></td>
+                    <td></td>
+                </tr>
+
+                <tr>
+                    <td>Inventario de Producto Terminado</td>
+                    <td></td>
+                    <td id="InventarioProductoTerminado_BalanceGeneral"></td>
+                    <td></td>
+                </tr>
+
+                <tr>
+                    <td><h3>Total de Activos Circulantes:</h3></td>
+                    <td></td>
+                    <td></td>
+                    <td id="TotalActivosCirculantes_BalanceGeneral"></td>
+                </tr>
+
+                <tr>
+                    <td></td><td></td><td></td><td></td>
+                </tr>
+
+                <tr>
+                    <td><b>No Circulante</b></td><td></td><td></td><td></td>
+                </tr>
+
+                <tr>
+                    <td>Terreno</td>
+                    <td></td>
+                    <td id="Terreo_BalanceGeneral"></td>
+                    <td></td>
+                </tr>
+
+                <tr>
+                    <td>Planta y Equipo</td>
+                    <td></td>
+                    <td id="PlantaEquipo_BalanceGeneral"></td>
+                    <td></td>
+                </tr>
+
+                <tr>
+                    <td>Depreciación Acumulada</td>
+                    <td></td>
+                    <td id="DepreciacionAcumulada_BalanceGeneral"></td>
+                    <td></td>
+                </tr>
+
+                <tr>
+                    <td><h3>Total de Activos No Circulantes:</h3></td>
+                    <td></td>
+                    <td></td>
+                    <td id="TotalActivosNoCirculantes_BalanceGeneral"></td>
+                </tr>
+
+                <tr>
+                    <td></td><td></td><td></td><td></td>
+                </tr>
+
+                <tr>
+                    <td><h3>ACTIVO TOTAL</h3></td>
+                    <td></td>
+                    <td></td>
+                    <td id="ActivoTotal_BalanceGeneral"></td>
+                </tr>
+
+                <tr>
+                    <td></td><td></td><td></td><td></td>
+                </tr>
+
+                <tr>
+                    <td><h3>PASIVO</h3></td><td></td><td></td><td></td>
+                </tr>
+
+                <tr>
+                    <td><b>Corto Plazo</b></td><td></td><td></td><td></td>
+                </tr>
+
+                <tr>
+                    <td>Proveedores</td>
+                    <td></td>
+                    <td id="Proveedores_BalanceGeneral"></td>
+                    <td></td>
+                </tr>
+
+                <tr>
+                    <td>Documentos por Pagar</td>
+                    <td></td>
+                    <td id="DocumentosPorPagar_BalanceGeneral"></td>
+                    <td></td>
+                </tr>
+
+                <tr>
+                    <td>ISR por Pagar</td><td></td><td></td><td></td>
+                </tr>
+
+                <tr>
+                    <td>PTU por Pagar</td>
+                    <td></td>
+                    <td id="PTUPorPagar_BalanceGeneral"></td>
+                    <td></td>
+                </tr>
+
+                <tr>
+                    <td><h3>Total de Pasivo Corto Plazo:</h3></td>
+                    <td></td>
+                    <td></td>
+                    <td id="TotalPasivoCortoPlazo_BalanceGeneral"></td>
+                </tr>
+
+                <tr>
+                    <td></td><td></td><td></td><td></td>
+                </tr>
+
+                <tr>
+                    <td><b>Largo Plazo</b></td><td></td><td></td><td></td>
+                </tr>
+
+                <tr>
+                    <td>Obligaciones por Pagar</td>
+                    <td></td>
+                    <td id="ObligacionesPorPagar_BalanceGeneral"></td>
+                    <td></td>
+                </tr>
+
+                <tr>
+                    <td><h3>Total de Pasivo Largo Plazo:</h3></td>
+                    <td></td>
+                    <td></td>
+                    <td id="TotalPasivoLargoPlazo_BalanceGeneral"></td>
+                </tr>
+
+                <tr>
+                    <td></td><td></td><td></td><td></td>
+                </tr>
+
+                <tr>
+                    <td><h3>PASIVO TOTAL</h3></td>
+                    <td></td>
+                    <td></td>
+                    <td id="TotalPasivo_BalanceGeneral"></td>
+                </tr>
+
+                <tr>
+                    <td></td><td></td><td></td><td></td>
+                </tr>
+
+                <tr>
+                    <td><h3>CAPITAL CONTABLE</h3></td><td></td><td></td><td></td>
+                </tr>
+
+                <tr>
+                    <td>Capital Aportado</td>
+                    <td></td>
+                    <td id="CapitalAportado_BalanceGeneral"></td>
+                    <td></td>
+                </tr>
+
+                <tr>
+                    <td>Capital Ganado</td>
+                    <td></td>
+                    <td id="CapitalGanado_BalanceGeneral"></td>
+                    <td></td>
+                </tr>
+
+                <tr>
+                    <td>Utilidad del Ejercicio</td>
+                    <td></td>
+                    <td id="UtilidadEjercicio_BalanceGeneral"></td>
+                    <td></td>
+                </tr>
+
+                <tr>
+                    <td><h3>Total de Capital Contable</h3></td>
+                    <td></td>
+                    <td></td>
+                    <td id="TotalCapitalContable"></td>
+                </tr>
+
+                <tr>
+                    <td></td><td></td><td></td><td></td>
+                </tr>
+
+                <tr>
+                    <td><h3>SUMA DE PASIVO Y CAPITAL</h3></td>
+                    <td></td>
+                    <td></td>
+                    <td id="SumaPasivoCapital_BalanceGeneral"></td>
+                </tr>
+
+                <tr>
+                    <td></td><td></td><td></td><td></td>
+                </tr>
+
+            </table>
+
+		</div>
+	</form>
+</body>
+</html>
